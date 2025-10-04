@@ -8,6 +8,18 @@
   <!-- Ad SDK (keep as you had) -->
   <script src="//libtl.com/sdk.js" data-zone="9858185" data-sdk="show_9858185"></script>
 
+  <!-- Adsterra Banner Ads -->
+  <script type="text/javascript">
+    atOptions = {
+      'key' : '431765fcfc9e477def98b949c504de3d',
+      'format' : 'iframe',
+      'height' : 50,
+      'width' : 320,
+      'params' : {}
+    };
+  </script>
+  <script type="text/javascript" src="//www.highperformanceformat.com/431765fcfc9e477def98b949c504de3d/invoke.js"></script>
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -38,6 +50,18 @@
 
     /* small helper for hidden class used inside JS toggles */
     .hidden { display: none !important; }
+    
+    /* Ad container styling */
+    .ad-container {
+      margin: 10px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 50px;
+      background-color: #2c2c2c;
+      border-radius: 8px;
+      padding: 5px;
+    }
   </style>
 </head>
 <body class="max-w-md mx-auto">
@@ -102,6 +126,20 @@
             <p class="text-sm text-gray-400">Ads Left: <span id="ads-left-count">...</span></p>
           </div>
 
+          <!-- Ad 1 - Options এর উপরে -->
+          <div class="ad-container">
+            <script type="text/javascript">
+              atOptions = {
+                'key' : '431765fcfc9e477def98b949c504de3d',
+                'format' : 'iframe',
+                'height' : 50,
+                'width' : 320,
+                'params' : {}
+              };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/431765fcfc9e477def98b949c504de3d/invoke.js"></script>
+          </div>
+
           <div class="space-y-3">
             <div class="bg-orange-500 p-3 rounded-lg flex items-center justify-between text-black">
               <div class="flex items-center space-x-3">
@@ -111,6 +149,7 @@
               <button class="bg-white text-orange-500 font-bold px-6 py-2 rounded-lg text-sm btn" onclick="claimReward('interstitial')">Claim</button>
             </div>
 
+
             <div class="card-bg p-3 rounded-lg flex items-center justify-between">
               <div class="flex items-center space-x-3">
                 <span class="text-3xl">😎</span>
@@ -119,6 +158,7 @@
               <button class="bg-white text-black font-bold px-6 py-2 rounded-lg text-sm btn" onclick="claimReward('popup')">Claim</button>
             </div>
 
+            
             <div class="card-bg p-3 rounded-lg flex items-center justify-between">
               <div class="flex items-center space-x-3">
                 <span class="text-3xl">🎬</span>
@@ -127,12 +167,28 @@
               <button class="bg-gray-700 text-white font-bold px-6 py-2 rounded-lg text-sm btn" onclick="claimReward('inApp')">Start</button>
             </div>
 
+          
+
             <div class="card-bg p-3 rounded-lg flex items-center justify-between">
               <div class="flex items-center space-x-3">
                 <span class="text-3xl">🎮</span>
                 <div><h3 class="font-semibold">Play Mini App</h3><p class="text-xs text-gray-400">Get a big reward!</p></div>
               </div>
               <button class="bg-blue-500 text-white font-bold px-6 py-2 rounded-lg text-sm btn" onclick="claimReward('miniApp')">Play</button>
+            </div>
+
+            <!-- Ad 5 - Fourth Option এর নিচে -->
+            <div class="ad-container">
+              <script type="text/javascript">
+                atOptions = {
+                  'key' : '431765fcfc9e477def98b949c504de3d',
+                  'format' : 'iframe',
+                  'height' : 50,
+                  'width' : 320,
+                  'params' : {}
+                };
+              </script>
+              <script type="text/javascript" src="//www.highperformanceformat.com/431765fcfc9e477def98b949c504de3d/invoke.js"></script>
             </div>
           </div>
         </section>
@@ -141,6 +197,27 @@
       <!-- WALLET -->
       <div id="wallet-page" class="p-4 space-y-6 sub-page">
         <h2 class="text-xl font-bold text-center">My Wallet</h2>
+        
+        <!-- Payment Schedule Notice -->
+        <div class="bg-yellow-500 text-black p-3 rounded-lg text-center">
+          <p class="font-bold">⚠️ Payment Notice</p>
+          <p class="text-sm">আমরা প্রতি মাসের 2-5 তারিখ এর মধ্যে Payment করি</p>
+        </div>
+        
+        <!-- Ad 6 - Wallet Page তে -->
+        <div class="ad-container">
+          <script type="text/javascript">
+            atOptions = {
+              'key' : '431765fcfc9e477def98b949c504de3d',
+              'format' : 'iframe',
+              'height' : 50,
+              'width' : 320,
+              'params' : {}
+            };
+          </script>
+          <script type="text/javascript" src="//www.highperformanceformat.com/431765fcfc9e477def98b949c504de3d/invoke.js"></script>
+        </div>
+        
         <div class="card-bg p-4 rounded-lg">
           <h3 class="font-semibold mb-3">Withdraw Earnings</h3>
           <p class="text-sm text-gray-400 mb-1">Current Balance: <span class="font-bold text-accent"><span id="wallet-coin-balance">0</span> Coins</span></p>
@@ -153,14 +230,44 @@
         </div>
 
         <div>
-          <h3 class="text-lg font-semibold mb-3">Withdrawal History</h3>
+          <h3 class="text-lg font-semibold mb-3">Recent Payments</h3>
+          <p class="text-sm text-gray-400 mb-3">সর্বশেষ Payment গুলো দেখুন</p>
           <div id="withdrawal-history-list" class="space-y-3"></div>
         </div>
       </div>
+      
+       <!-- Ad 9 - Wallet Page তে -->
+        <div class="ad-container">
+          <script type="text/javascript">
+            atOptions = {
+              'key' : '431765fcfc9e477def98b949c504de3d',
+              'format' : 'iframe',
+              'height' : 50,
+              'width' : 320,
+              'params' : {}
+            };
+          </script>
+          <script type="text/javascript" src="//www.highperformanceformat.com/431765fcfc9e477def98b949c504de3d/invoke.js"></script>
+        </div>
 
       <!-- REFER -->
       <div id="refer-page" class="p-4 space-y-6 sub-page">
         <h2 class="text-xl font-bold text-center">Refer & Earn</h2>
+        
+        <!-- Ad 7 - Refer Page তে -->
+        <div class="ad-container">
+          <script type="text/javascript">
+            atOptions = {
+              'key' : '431765fcfc9e477def98b949c504de3d',
+              'format' : 'iframe',
+              'height' : 50,
+              'width' : 320,
+              'params' : {}
+            };
+          </script>
+          <script type="text/javascript" src="//www.highperformanceformat.com/431765fcfc9e477def98b949c504de3d/invoke.js"></script>
+        </div>
+        
         <div class="card-bg p-6 rounded-lg text-center">
           <p class="text-gray-400 mb-2">Your Referral Code</p>
           <div class="bg-gray-800 p-3 rounded-lg flex items-center justify-center mb-4">
@@ -178,10 +285,39 @@
           <button id="apply-referral-btn" class="w-full p-3 rounded-lg btn-outline-accent">Apply Code</button>
         </div>
       </div>
+      
+       <!-- Ad 6 - Wallet Page তে -->
+        <div class="ad-container">
+          <script type="text/javascript">
+            atOptions = {
+              'key' : '431765fcfc9e477def98b949c504de3d',
+              'format' : 'iframe',
+              'height' : 50,
+              'width' : 320,
+              'params' : {}
+            };
+          </script>
+          <script type="text/javascript" src="//www.highperformanceformat.com/431765fcfc9e477def98b949c504de3d/invoke.js"></script>
+        </div>
 
       <!-- PROFILE -->
       <div id="profile-page" class="p-4 space-y-6 sub-page">
         <h2 class="text-xl font-bold text-center mb-4">Profile</h2>
+        
+        <!-- Ad 8 - Profile Page তে -->
+        <div class="ad-container">
+          <script type="text/javascript">
+            atOptions = {
+              'key' : '431765fcfc9e477def98b949c504de3d',
+              'format' : 'iframe',
+              'height' : 50,
+              'width' : 320,
+              'params' : {}
+            };
+          </script>
+          <script type="text/javascript" src="//www.highperformanceformat.com/431765fcfc9e477def98b949c504de3d/invoke.js"></script>
+        </div>
+        
         <div class="flex flex-col items-center">
           <img src="https://placehold.co/100x100/1e1e1e/ff8c00?text=U" class="rounded-full mb-2">
           <h2 id="profile-name" class="text-xl font-bold">User Name</h2>
@@ -521,29 +657,74 @@
 
     // -------------- Withdrawals / History --------------
     async function loadWithdrawalHistory() {
-      if (!currentUser) return;
       const historyList = document.getElementById('withdrawal-history-list');
-      historyList.innerHTML = '<p class="text-gray-400">Loading history...</p>';
+      historyList.innerHTML = '<p class="text-gray-400">Loading payment history...</p>';
+      
       try {
-        const q = query(collection(db, "withdrawals"), where("userId", "==", currentUser.uid), orderBy("requestedAt", "desc"));
+        // শুধুমাত্র approved payment গুলো দেখাবে (সকল user-এর)
+        const q = query(
+          collection(db, "withdrawals"), 
+          where("status", "==", "approved"),
+          orderBy("requestedAt", "desc"),
+          limit(20) // সর্বশেষ ২০টি payment দেখাবে
+        );
+        
         const querySnapshot = await getDocs(q);
+        console.log("Found", querySnapshot.size, "approved payments");
+        
         if (querySnapshot.empty) {
-          historyList.innerHTML = `<p class="text-gray-400 text-center">You haven't made any withdrawals yet.</p>`;
+          historyList.innerHTML = `<p class="text-gray-400 text-center">No payment history available yet.</p>`;
           return;
         }
+        
         historyList.innerHTML = '';
         querySnapshot.forEach(docSnap => {
-          const request = docSnap.data();
-          const status = request.status || 'pending';
-          let statusColor = 'text-yellow-400';
-          if (status === 'approved') statusColor = 'text-green-400';
-          else if (status === 'rejected') statusColor = 'text-red-400';
-          const date = request.requestedAt && request.requestedAt.toDate ? request.requestedAt.toDate().toLocaleDateString() : 'N/A';
-          historyList.innerHTML += `<div class="card-bg p-3 rounded-lg mb-3 flex items-center justify-between"><div><p class="font-semibold">${request.amount} Coins - ${request.method}</p><p class="text-xs text-gray-400">${date}</p></div><p class="font-bold ${statusColor} capitalize">${status}</p></div>`;
+          const payment = docSnap.data();
+          
+          // Format date properly
+          let date = 'N/A';
+          if (payment.requestedAt) {
+            if (payment.requestedAt.toDate) {
+              date = payment.requestedAt.toDate().toLocaleDateString('bn-BD');
+            } else if (payment.requestedAt instanceof Date) {
+              date = payment.requestedAt.toLocaleDateString('bn-BD');
+            }
+          }
+          
+          // User name format (প্রথম নাম দেখাবে, শেষ নাম লুকাবে)
+          let displayName = "User";
+          if (payment.userName) {
+            const names = payment.userName.split(' ');
+            if (names.length > 1) {
+              displayName = names[0] + " " + names[names.length - 1].charAt(0) + "***";
+            } else {
+              displayName = names[0];
+            }
+          }
+          
+          // Calculate actual payment amount in Taka
+          const coinValue = appConfig.coinValueInr || 10;
+          const coinRate = appConfig.coinValueCoins || 1000;
+          const paymentAmount = (payment.amount / coinRate) * coinValue;
+          
+          historyList.innerHTML += `
+            <div class="card-bg p-3 rounded-lg mb-3 border-l-4 border-green-500">
+              <div class="flex justify-between items-start mb-2">
+                <div>
+                  <p class="font-semibold text-green-400">✅ Payment Successful</p>
+                  <p class="text-sm">${displayName} received ৳${paymentAmount.toFixed(2)}</p>
+                  <p class="text-xs text-gray-400">${payment.method} • ${date}</p>
+                </div>
+                <div class="text-right">
+                  <p class="font-bold text-accent">${payment.amount} Coins</p>
+                  <p class="text-xs text-gray-400">Approved</p>
+                </div>
+              </div>
+            </div>`;
         });
       } catch (error) {
-        console.error("Error fetching withdrawal history: ", error);
-        historyList.innerHTML = '<p class="text-red-400 text-center">Error loading history.</p>';
+        console.error("Error fetching payment history: ", error);
+        historyList.innerHTML = '<p class="text-red-400 text-center">Error loading payment history.</p>';
       }
     }
 
@@ -608,14 +789,25 @@
       if (amount > userData.balance) return showAlert("Insufficient balance.");
       if (!paymentDetail) return showAlert("Please enter payment details (e.g., UPI ID or bKash Number).");
 
+      // Show payment schedule confirmation
+      if (!confirm("আমরা প্রতি মাসের 2-5 তারিখ এর মধ্যে Payment করি। আপনি কি নিশ্চিত যে আপনি এখনই উত্তোলনের জন্য আবেদন করতে চান?")) {
+        return;
+      }
+
       loader.style.display = 'flex';
       try {
         await updateBalance(-amount);
         await addDoc(collection(db, "withdrawals"), {
-          userId: currentUser.uid, userName: userData.name, userEmail: userData.email,
-          amount: amount, method: method, paymentDetail: paymentDetail, status: "pending", requestedAt: serverTimestamp()
+          userId: currentUser.uid, 
+          userName: userData.name, 
+          userEmail: userData.email,
+          amount: amount, 
+          method: method, 
+          paymentDetail: paymentDetail, 
+          status: "pending", 
+          requestedAt: serverTimestamp()
         });
-        showAlert("Withdrawal request submitted successfully!");
+        showAlert("Withdrawal request submitted successfully! আমরা প্রতি মাসের 2-5 তারিখ এর মধ্যে Payment করি।");
         document.getElementById('withdraw-amount').value = '';
         if (paymentDetailInput) paymentDetailInput.value = '';
         loadWithdrawalHistory();
@@ -710,4 +902,3 @@
   </script>
 </body>
 </html>
-
